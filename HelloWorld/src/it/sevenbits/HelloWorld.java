@@ -2,7 +2,7 @@ package it.sevenbits;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
+        // Prints "This is Hello World from branch2" to the terminal window.
+        System.out.println("This is Hello World from branch2");
     }
 }
