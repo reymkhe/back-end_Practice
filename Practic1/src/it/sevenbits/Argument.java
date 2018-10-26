@@ -9,7 +9,7 @@ public class Argument {
 
         System.out.println("enter the argument");
 
-        String argument = s.nextLine();
+        String argument = s.nextLine();me
 
         System.out.println("Hello, "+argument);
 
