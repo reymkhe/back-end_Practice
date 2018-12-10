@@ -2,15 +2,23 @@ package com.ten_experts.summatra.array;
 
 import com.ten_experts.summatra.array.exceptions.ArraySummaterException;
 
+/**
+ * SimpleSummater is implementation of IArraySummater with simple sum
+ */
 public class SimpleSummater implements IArraySummater {
-
-    public int sum(int[] arr) throws ArraySummaterException {
+    /**
+     * Sum function returns sum of all integers from an array
+     * @param arr - array of integers
+     * @return sum of integers from an array
+     * @throws ArraySummaterException when array is not exist
+     */
+    public int sum(final int[] arr) throws ArraySummaterException {
         if (arr.length == 0) {
             throw new ArraySummaterException();
         }
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            sum = sum+arr[i];
+            sum = sum + arr[i];
         }
         return sum;
     }
