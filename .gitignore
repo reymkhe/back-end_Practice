@@ -3,3 +3,5 @@ target/
 *.class
 *.jar
 *.iml
+javadoc/
+Practice3/
