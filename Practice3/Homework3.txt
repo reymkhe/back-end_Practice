@@ -1,0 +1,10 @@
+.
+..
+.git
+.gitignore
+HelloWorld
+Homework3.txt
+Practic1
+Practic2
+README.md
+А ларчик просто открывался
