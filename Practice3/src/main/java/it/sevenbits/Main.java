@@ -3,8 +3,16 @@ package it.sevenbits;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * Main application entry point
+ */
 public class Main {
-    public static void main(String[] args) throws IOException {
+    /**
+     * Main function for app
+     * @param args - console arguments
+     * @throws IOException when file not found
+     */
+    public static void main(final String[] args) throws IOException {
         File file = new File("MyHomework.txt");
         file.createNewFile();
 
@@ -20,7 +28,8 @@ public class Main {
 
         String surname = "Reymkhe";
         byte[] surnameInBytes = surname.getBytes(StandardCharsets.UTF_8);
-        fos.write (surnameInBytes);
+        fos.write(surnameInBytes);
         fos.close();
     }
 }
+
