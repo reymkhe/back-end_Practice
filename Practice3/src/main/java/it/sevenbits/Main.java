@@ -13,13 +13,14 @@ public class Main {
      * @throws IOException when file not found
      */
     public static void main(final String[] args) throws IOException {
-        File file = new File("MyHomework.txt");
-        file.createNewFile();
+        File fileFrom = new File("Homework3.txt");
+        File fileTo = new File("MyHomework.txt");
+        fileTo.createNewFile();
 
         FileInputStream fis = new FileInputStream("Homework3.txt");
         FileOutputStream fos = new FileOutputStream("MyHomework.txt");
         try {
-            byte[] bytes = new byte[(int) file.length()];
+            byte[] bytes = new byte[(int) fileFrom.length()];
             fis.read(bytes);
             fos.write(bytes);
         } catch (IOException ex) {

@@ -7,7 +7,7 @@ import java.io.*;
  */
 public class FileReader {
     private String filePath;
-    private LineNumberReader lineNumberReader;
+    private BufferedReader bufferedReader;
     private String prevLine;
     private int lineNumber;
 
@@ -20,10 +20,9 @@ public class FileReader {
         this.filePath = filePath;
         File file = new File(filePath);
         Reader reader = new java.io.FileReader(file);
-        this.lineNumberReader = new LineNumberReader(reader);
-
-        prevLine = lineNumberReader.readLine();
-        lineNumber = lineNumberReader.getLineNumber();
+        this.bufferedReader = new BufferedReader(reader);
+        prevLine = bufferedReader.readLine();
+        lineNumber = 1;
     }
 
     /**
@@ -35,10 +34,10 @@ public class FileReader {
         String finalLine = null;
         if (hasMoreLines()) {
             finalLine = filePath + " line " + lineNumber + ": " + prevLine;
-            prevLine = lineNumberReader.readLine();
-            lineNumber = lineNumberReader.getLineNumber();
+            prevLine = bufferedReader.readLine();
+            lineNumber = lineNumber ++;
             if (!hasMoreLines()) {
-                lineNumberReader.close();
+               bufferedReader.close();
             }
         }
         return finalLine;
