@@ -1,9 +1,6 @@
 package it.sevenbits;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Class for Practice 4, first task
@@ -18,12 +15,7 @@ public class FirstTask {
         map.put(2, "two");
         map.put(3, "three");
 
-        Set<Integer> keys = new HashSet<>();
-        Set<String> values = new HashSet<>();
-
-        for (Integer key : map.keySet()) {
-            keys.add(key);
-            values.add(map.get(key));
-        }
+        Set<Integer> keys = map.keySet();
+        Collection<String> values = map.values();
     }
 }
