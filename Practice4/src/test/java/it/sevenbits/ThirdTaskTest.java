@@ -17,7 +17,7 @@ public class ThirdTaskTest {
     private ArrayList<Integer> arr2 = new ArrayList<>();
 
     /**
-     * Simple test for getDifference function
+     * Simple positive test for getDifference function
      */
     @Test
     public void simpleThirdTaskTest() {
@@ -42,4 +42,23 @@ public class ThirdTaskTest {
         expectedArr.add(arr13);
         Assert.assertArrayEquals(expectedArr.toArray(), thirdTask.getDifference(arr1, arr2).toArray());
     }
+
+    /**
+     * Test for getDifference function using array consisting of one element
+     */
+    @Test
+    public void oneCharacterElementsTest() {
+        arr11.add(1);
+        arr12.add(1);
+        arr13.add(3);
+        arr1.add(arr11);
+        arr1.add(arr12);
+        arr1.add(arr13);
+        arr2.add(1);
+
+        ArrayList<ArrayList<Integer>> expectedArr = new ArrayList<>();
+        expectedArr.add(arr13);
+        Assert.assertArrayEquals(expectedArr.toArray(), thirdTask.getDifference(arr1, arr2).toArray());
+    }
 }
+
